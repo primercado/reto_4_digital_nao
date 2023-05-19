@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot Escuela </title>
+  </head>
+  <body>
+    <h1>Bienvenido a la app de chat de la Escuela</h1>
+    <form method="POST" action="/">
+      <input type="text" name="question" placeholder="Ingrese su pregunta">
+      <input type="submit" value="Enviar">
+    </form>
+    {% if chat %}
+    <div>
+      {% for message in chat %}
+      <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </body>
+</html>
